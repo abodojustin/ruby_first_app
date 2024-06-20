@@ -5,13 +5,10 @@ Rails.application.routes.draw do
   #get '/friends/index', to: 'friends#index'
 
   root "pages#home" # get '/', to: 'pages#home'
-  get 'contact', to: 'pages#contact'
-  get 'login', to: 'pages#login'
   get 'contacts', to: 'contacts#index'
   get 'contacts/:surname', to: 'contacts#show'
   get 'languages', to: 'languages#index'
-  get 'test', to: 'pages#test'
-  get ':token', to: 'pages#bonus'
+  get 'about', to: 'pages#contact'
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
