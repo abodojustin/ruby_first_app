@@ -1,0 +1,7 @@
+<h1>Liste de mes amis</h1>
+
+<ul>
+    <% for surname in @contacts.keys %>
+        <li><a href="/contacts/<%= surname %>"> <%= surname %> </a></li>
+    <% end %>
+</ul>
