@@ -8,4 +8,9 @@ class ContactsController < ApplicationController
     @contacts = {"Ruby" => "123", "Python" => "345", "Java" => "567", "Sarah" => "789", "Paul" => "901", "Pierre" => "234"}
     @telephone = @contacts[@surname]
   end
+
+  def contact
+    @time = Time.now
+    render(:template => 'pages/contact')
+  end
 end
