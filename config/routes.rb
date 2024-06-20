@@ -8,7 +8,10 @@ Rails.application.routes.draw do
   get 'contacts', to: 'contacts#index'
   get 'contacts/:surname', to: 'contacts#show'
   get 'languages', to: 'languages#index'
-  get 'about', to: 'pages#contact'
+  get 'contact', to: 'pages#contact'
+
+  get 'about', to: 'pages#about'
+  get 'terms', to: 'pages#terms'
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
