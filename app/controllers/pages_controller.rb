@@ -4,8 +4,13 @@ class PagesController < ApplicationController
     end
 
     def home
-        flash[:notice] = "Connecté avec succès"
-        flash[:alert] = "email ou mot de passe invalide"
+        if session[:user_id]
+            @user = User.find_by(id: session[:user_id])
+            flash[:notice] = "Connecté avec succès"
+        else
+            flash[:alert] = "email ou mot de passe invalide"
+            redirect_to sign_up
+        end
     end
 
     def about

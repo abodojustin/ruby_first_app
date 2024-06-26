@@ -1,3 +1,6 @@
 <div class="d-flex align-items-center justify-content-center">
     <h1>Bienvenue sur ma super landing page. </h1>
 </div>
+<% if @user %>
+    <p>Connecté en tant que: <%= @user.email %> </p>
+<% end %>
