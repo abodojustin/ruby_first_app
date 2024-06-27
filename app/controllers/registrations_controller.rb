@@ -8,8 +8,8 @@ class RegistrationsController < ApplicationController
         if @user.save
             session[:user_id] = @user.id
             redirect_to root_path, notice: "Successfully created account"
-        else
-            render :new
+        # else
+        #     render :new
         end
     end
 
