@@ -7,4 +7,8 @@ class ApplicationController < ActionController::Base
             flash[:notice] = "Connecté avec succès"
         end
     end
+
+    def require_user_logged_in!
+        redirect_to sign_in_path, alert: "Vous devez être connecter." if Current.user.nil?
+    end
 end
